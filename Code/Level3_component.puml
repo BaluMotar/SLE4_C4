@@ -1,0 +1,25 @@
+@startuml
+title Level 3 - Component Diagram - Search Engine
+
+rectangle "Search Engine" {
+
+    component "Frontier\nQueue / Stack" as Frontier
+
+    component "Explored / Visited Set" as Visited
+
+    component "Goal Test" as Goal
+
+    component "Path Reconstructor" as Path
+
+    component "BFS / DFS Algorithm" as Algorithm
+}
+
+Frontier --> Algorithm : Get Next Node
+Algorithm --> Visited : Check / Mark Visited
+Visited --> Algorithm : Visited Information
+Algorithm --> Goal : Check Current Node
+Goal --> Algorithm : Goal Reached?
+Algorithm --> Path : Parent Information
+Path --> Algorithm : Final Path
+
+@enduml

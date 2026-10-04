@@ -1,0 +1,24 @@
+@startuml
+title Level 2 - Container Diagram - Maze Solving System
+
+rectangle "User" as User
+
+rectangle "Maze Solving System" {
+
+    rectangle "Input Module" as Input
+    rectangle "Search Engine\nBFS / DFS" as Search
+    rectangle "Memory / Visited Set" as Memory
+    rectangle "Goal Test" as Goal
+    rectangle "Output Module" as Output
+}
+
+User --> Input : Enter Maze\nStart & Goal
+Input --> Search : Maze Data
+Search --> Memory : Store Visited Nodes
+Memory --> Search : Visited Information
+Search --> Goal : Check Goal
+Goal --> Search : Goal Status
+Search --> Output : Solved Path / Result
+Output --> User : Display Result
+
+@enduml

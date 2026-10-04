@@ -1,0 +1,33 @@
+@startuml
+title Level 4 - Code Level Overview
+
+class Maze {
+    maze
+    start
+    goal
+}
+
+class Node {
+    position
+    parent
+}
+
+class SearchEngine {
+    bfs()
+    dfs()
+}
+
+class VisitedSet {
+    visited
+}
+
+class PathReconstructor {
+    reconstruct_path()
+}
+
+Maze --> SearchEngine
+SearchEngine --> Node
+SearchEngine --> VisitedSet
+SearchEngine --> PathReconstructor
+
+@enduml
