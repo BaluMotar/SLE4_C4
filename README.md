@@ -13,7 +13,6 @@ This folder contains the SLE-3 architecture work based on the SLE-2 BFS vs DFS m
 ## Files
 - `SLE3_PRN_YourName.docx` — final report
 - `c4_diagrams.md` — diagram descriptions
-- `Viva_Questions.md` — oral preparation
 - `level1_context.png` through `level4_code.png` — diagrams
 
 Before submission, replace the PRN, name, division and date placeholders.
